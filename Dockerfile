@@ -10,7 +10,6 @@ RUN \
     apt-get install -y apache2 php php-mysql libapache2-mod-php && \
     rm -rf /var/lib/apt/lists && \
     rm -rf /etc/apt/sources.list.d && \
-    echo Europe/Brussels > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata && \
     ln -sf /dev/stdout /var/log/apache2/access.log && \
     ln -sf /dev/stderr /var/log/apache2/error.log && \
     rm /etc/apache2/sites-enabled/000-default.conf && \
